@@ -28,11 +28,58 @@
 <section class="section"><div class="container"><div class="faq-inquiry">
 <div class="card info-panel"><h2>Contact Information</h2><ul><li>WhatsApp: +86 199 8201 2846</li><li>Email: Eliane@fsbox.com</li><li>Address: No. 32, Ganjiao Industrial Zone, Lishui Town, Nanhai District, Foshan, Guangdong, China</li><li>Main Markets: Middle East & Europe</li></ul><p style="color:#475467;line-height:1.8">Please send your quantity, product interest, drawings or reference images. Our sales team will recommend the most suitable stainless steel bin solution.</p></div>
 <div id="inquiry"><h2>Send Us Your Inquiry</h2><div class="redline" style="margin-left:0"></div>
-<form><div class="form-grid">
-<div class="field"><label>Name *</label><input></div><div class="field"><label>Email *</label><input></div><div class="field"><label>WhatsApp *</label><input></div>
-<div class="field"><label>Country *</label><input></div><div class="field"><label>Product Interest *</label><select><option>Recycling Bin</option><option>Lobby Bin</option><option>Outdoor Bin</option><option>Pedal Bin</option><option>Ashtray Bin</option><option>Custom Bin</option></select></div><div class="field"><label>Quantity *</label><input></div>
-<div class="field full"><label>Message *</label><textarea rows="6"></textarea></div><div class="field full"><label>Upload Drawing / Reference Image</label><input type="file"></div>
-</div><div style="margin-top:16px"><button type="button" class="btn btn-red" style="width:100%">SEND INQUIRY & GET QUOTE</button></div></form>
+<p style="color:#475467;margin:0 0 14px">Choose either way to send your inquiry — WhatsApp for an instant chat, or Email for a written record.</p>
+<form id="inquiryForm"><div class="form-grid">
+<div class="field"><label>Name *</label><input id="f_name"></div><div class="field"><label>Company</label><input id="f_company"></div><div class="field"><label>Email</label><input id="f_email" type="email"></div>
+<div class="field"><label>WhatsApp / Phone</label><input id="f_phone"></div><div class="field"><label>Country</label><input id="f_country"></div><div class="field"><label>Product Interest</label><select id="f_product"><option>Recycling Bin</option><option>Lobby Bin</option><option>Outdoor Bin</option><option>Pedal Bin</option><option>Ashtray Bin</option><option>Custom Bin</option></select></div>
+<div class="field"><label>Quantity</label><input id="f_quantity"></div>
+<div class="field full"><label>Message</label><textarea id="f_message" rows="6"></textarea></div>
+</div>
+<p style="color:#98a2b3;font-size:12px;margin:10px 0 0">* Name is required. Please provide at least an Email or a WhatsApp/Phone number.</p>
+<div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<button type="button" id="btnWhatsApp" class="btn" style="width:100%;background:#25d366;color:#fff">☘ Send via WhatsApp</button>
+<button type="button" id="btnEmail" class="btn btn-blue" style="width:100%">✉ Send via Email</button>
+</div></form>
+<script>
+(function(){
+  var WA_NUMBER = "8619982012846";
+  var MAIL_TO = "Eliane@fsbox.com";
+  function val(id){ var el = document.getElementById(id); return el ? el.value.trim() : ""; }
+  function buildMessage(){
+    var lines = [];
+    lines.push("New Inquiry from goboxin.com");
+    lines.push("");
+    lines.push("Name: " + (val("f_name") || "-"));
+    lines.push("Company: " + (val("f_company") || "-"));
+    lines.push("Email: " + (val("f_email") || "-"));
+    lines.push("WhatsApp/Phone: " + (val("f_phone") || "-"));
+    lines.push("Country: " + (val("f_country") || "-"));
+    lines.push("Product Interest: " + (val("f_product") || "-"));
+    lines.push("Quantity: " + (val("f_quantity") || "-"));
+    lines.push("");
+    lines.push("Message:");
+    lines.push(val("f_message") || "-");
+    return lines.join("\n");
+  }
+  function validate(){
+    if(!val("f_name")){ alert("Please enter your Name."); return false; }
+    if(!val("f_email") && !val("f_phone")){ alert("Please provide at least an Email or a WhatsApp/Phone number."); return false; }
+    return true;
+  }
+  var waBtn = document.getElementById("btnWhatsApp");
+  if(waBtn){ waBtn.addEventListener("click", function(){
+    if(!validate()) return;
+    var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(buildMessage());
+    window.open(url, "_blank");
+  }); }
+  var mailBtn = document.getElementById("btnEmail");
+  if(mailBtn){ mailBtn.addEventListener("click", function(){
+    if(!validate()) return;
+    var url = "mailto:" + MAIL_TO + "?subject=" + encodeURIComponent("New Inquiry from goboxin.com") + "&body=" + encodeURIComponent(buildMessage());
+    window.location.href = url;
+  }); }
+})();
+</script>
 </div>
 </div></div></section>
 
