@@ -23,3 +23,14 @@ a{text-decoration:none;color:inherit} img{max-width:100%;display:block}
 .preview-wrap{padding:32px 0;background:#f5f7fb}.preview-wrap .frame{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 25px rgba(16,24,40,.06)}.preview-wrap h1{text-align:center}
 @media (max-width:1100px){.hero-grid,.about-grid,.contact-layout,.band{grid-template-columns:1fr}.hero-products{grid-template-columns:repeat(3,1fr)}.features-strip .grid{grid-template-columns:repeat(3,1fr)}.category-grid{grid-template-columns:repeat(3,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}.icon-grid.six{grid-template-columns:repeat(3,1fr)}.icon-grid.five{grid-template-columns:repeat(3,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:680px){.brand img{width:50px;height:50px}.brand .name{font-size:22px}.nav-links{gap:14px;font-size:14px}.hero h1{font-size:40px}.hero p{font-size:16px}.hero-products{grid-template-columns:repeat(2,1fr)}.hero-products .item.big{grid-column:span 2}.features-strip .grid,.category-grid,.product-grid,.icon-grid.six,.icon-grid.five,.stats-grid,.faq-grid,.form-grid,.footer-grid{grid-template-columns:1fr}.section{padding:42px 0}.section-title h2{font-size:30px}}
+
+/* === WhatsApp floating button === */
+.wa-float{position:fixed;right:24px;bottom:24px;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(37,211,102,.45);z-index:9999;text-decoration:none;animation:wa-float-move 3s ease-in-out infinite}
+.wa-float svg{width:34px;height:34px;fill:#fff;display:block;animation:wa-float-pulse 2s ease-in-out infinite}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;opacity:.55;z-index:-1;animation:wa-float-ring 2.2s ease-out infinite}
+.wa-float:hover{background:#1ebe5d;box-shadow:0 8px 24px rgba(37,211,102,.6)}
+@keyframes wa-float-move{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes wa-float-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes wa-float-ring{0%{transform:scale(1);opacity:.55}80%,100%{transform:scale(1.9);opacity:0}}
+@media (max-width:768px){.wa-float{right:16px;bottom:16px;width:54px;height:54px}.wa-float svg{width:30px;height:30px}}
+@media (prefers-reduced-motion:reduce){.wa-float,.wa-float svg,.wa-float::before{animation:none}}
