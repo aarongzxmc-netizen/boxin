@@ -5,23 +5,23 @@ title BOXIN B2B Site One-Click Deployer
 cls
 
 echo =======================================================================
-echo         åšæ–°çŽ¯ä¿ (BOXIN) B2B ç‹¬ç«‹ç«™ä¸€é”®åˆå§‹åŒ–ä¸Žéƒ¨ç½²å·¥å…·
+echo         ²©ÐÂ»·±£ (BOXIN) B2B ¶ÀÁ¢Õ¾Ò»¼ü³õÊ¼»¯Óë²¿Êð¹¤¾ß
 echo         BOXIN B2B Site One-Click Local Init ^& Deployment Tool
 echo =======================================================================
 echo.
 
 :: 1. Environment check (git)
-echo [1/4] æ­£åœ¨æ£€æµ‹æœ¬åœ°å¼€å‘çŽ¯å¢ƒ (Checking local environment)...
+echo [1/4] ÕýÔÚ¼ì²â±¾µØ¿ª·¢»·¾³ (Checking local environment)...
 where git >nul 2>&1
 if %errorlevel% neq 0 (
-    echo [é”™è¯¯/ERROR] æœªæ£€æµ‹åˆ° Git å®¢æˆ·ç«¯ï¼(Git is not installed.)
-    echo è¯·å…ˆä¸‹è½½å¹¶å®‰è£… Git: https://git-scm.com/
+    echo [´íÎó/ERROR] Î´¼ì²âµ½ Git ¿Í»§¶Ë£¡(Git is not installed.)
+    echo ÇëÏÈÏÂÔØ²¢°²×° Git: https://git-scm.com/
     echo Please install Git first: https://git-scm.com/
     echo.
     pause
     exit /b 1
 ) else (
-    echo - Git æ£€æµ‹é€šè¿‡ (Git is detected).
+    echo - Git ¼ì²âÍ¨¹ý (Git is detected).
 )
 
 :: Environment check (gh)
@@ -29,44 +29,44 @@ where gh >nul 2>&1
 set HAS_GH=1
 if %errorlevel% neq 0 (
     set HAS_GH=0
-    echo - [æç¤º/WARNING] æœªæ£€æµ‹åˆ° GitHub CLI (gh) å®¢æˆ·ç«¯ã€‚
-    echo   å¦‚æžœæ‚¨å¸Œæœ›ä½“éªŒå…¨è‡ªåŠ¨å»ºä»“æŽ¨é€ï¼ŒæŽ¨èå®‰è£… gh: https://cli.github.com/
+    echo - [ÌáÊ¾/WARNING] Î´¼ì²âµ½ GitHub CLI (gh) ¿Í»§¶Ë¡£
+    echo   Èç¹ûÄúÏ£ÍûÌåÑéÈ«×Ô¶¯½¨²ÖÍÆËÍ£¬ÍÆ¼ö°²×° gh: https://cli.github.com/
     echo   (Note: GitHub CLI 'gh' is recommended for auto-creation: https://cli.github.com/)
-    echo   æˆ‘ä»¬å°†æä¾›æ‰‹åŠ¨ Git å…³è”é€‰é¡¹ã€‚
+    echo   ÎÒÃÇ½«Ìá¹©ÊÖ¶¯ Git ¹ØÁªÑ¡Ïî¡£
 ) else (
-    echo - GitHub CLI (gh) æ£€æµ‹é€šè¿‡ (GitHub CLI is detected).
+    echo - GitHub CLI (gh) ¼ì²âÍ¨¹ý (GitHub CLI is detected).
 )
 echo.
 
 :: 2. Git Initialization
-echo [2/4] åˆå§‹åŒ–æœ¬åœ° Git ä»“åº“ (Initializing Git repository)...
+echo [2/4] ³õÊ¼»¯±¾µØ Git ²Ö¿â (Initializing Git repository)...
 if not exist .git (
     git init
     git branch -M main
-    echo - æœ¬åœ°ä»“åº“åˆå§‹åŒ–æˆåŠŸ (Local repository initialized).
+    echo - ±¾µØ²Ö¿â³õÊ¼»¯³É¹¦ (Local repository initialized).
 ) else (
-    echo - æœ¬åœ°ä»“åº“å·²å­˜åœ¨ï¼Œæ— éœ€é‡æ–°åˆå§‹åŒ– (Local Git repository already exists).
+    echo - ±¾µØ²Ö¿âÒÑ´æÔÚ£¬ÎÞÐèÖØÐÂ³õÊ¼»¯ (Local Git repository already exists).
 )
 
 echo.
-echo æ­£åœ¨æ·»åŠ é¡¹ç›®æ–‡ä»¶å¹¶åˆ›å»ºé¦–æ¬¡æäº¤ (Staging files ^& committing)...
+echo ÕýÔÚÌí¼ÓÏîÄ¿ÎÄ¼þ²¢´´½¨Ê×´ÎÌá½» (Staging files ^& committing)...
 git add .
 git commit -m "chore: initial commit - BOXIN B2B website integrated" >nul 2>&1
 if %errorlevel% neq 0 (
-    echo - æš‚æ— æ–°æ–‡ä»¶éœ€è¦æäº¤ (No changes to commit, or commit already done).
+    echo - ÔÝÎÞÐÂÎÄ¼þÐèÒªÌá½» (No changes to commit, or commit already done).
 ) else (
-    echo - æˆåŠŸåˆ›å»ºé¦–æ¬¡æäº¤ (Successfully created initial commit).
+    echo - ³É¹¦´´½¨Ê×´ÎÌá½» (Successfully created initial commit).
 )
 echo.
 
 :: 3. Remote Repository Association
-echo [3/4] å…³è”è¿œç¨‹ GitHub ä»“åº“ (Associating remote GitHub repository)...
+echo [3/4] ¹ØÁªÔ¶³Ì GitHub ²Ö¿â (Associating remote GitHub repository)...
 git remote get-url origin >nul 2>&1
 if %errorlevel% eq 0 (
-    echo - å·²å­˜åœ¨ç»‘å®šçš„è¿œç¨‹ä»“åº“ (Remote origin already exists).
+    echo - ÒÑ´æÔÚ°ó¶¨µÄÔ¶³Ì²Ö¿â (Remote origin already exists).
     git remote -v
     echo.
-    set /p REBIND="æ˜¯å¦è¦é‡æ–°ç»‘å®šè¿œç¨‹ä»“åº“? (y/n) [Confirm rebind remote?]: "
+    set /p REBIND="ÊÇ·ñÒªÖØÐÂ°ó¶¨Ô¶³Ì²Ö¿â? (y/n) [Confirm rebind remote?]: "
     if /i "%REBIND%"=="y" (
         git remote remove origin
         goto :bind_flow
@@ -77,63 +77,63 @@ if %errorlevel% eq 0 (
 :bind_flow
 if %HAS_GH%==1 (
     echo.
-    echo æ£€æµ‹åˆ°æ‚¨å®‰è£…äº† GitHub CLI (gh)ï¼Œæˆ‘ä»¬å¯ä»¥å¸®æ‚¨ä¸€é”®åœ¨ GitHub ä¸Šåˆ›å»ºå¹¶æŽ¨é€ã€‚
+    echo ¼ì²âµ½Äú°²×°ÁË GitHub CLI (gh)£¬ÎÒÃÇ¿ÉÒÔ°ïÄúÒ»¼üÔÚ GitHub ÉÏ´´½¨²¢ÍÆËÍ¡£
     echo (Detected GitHub CLI, we can auto-create the repository on GitHub for you.)
     echo.
-    set /p AUTO_CREATE="æ˜¯å¦éœ€è¦è‡ªåŠ¨åœ¨ GitHub ä¸Šåˆ›å»ºæ–°ä»“åº“å¹¶æŽ¨é€? (y/n) [Auto-create repo via gh?]: "
+    set /p AUTO_CREATE="ÊÇ·ñÐèÒª×Ô¶¯ÔÚ GitHub ÉÏ´´½¨ÐÂ²Ö¿â²¢ÍÆËÍ? (y/n) [Auto-create repo via gh?]: "
     if /i "%AUTO_CREATE%"=="y" (
-        echo æ­£åœ¨æ£€æµ‹ GitHub ç™»å½•çŠ¶æ€ (Checking gh authentication status)...
+        echo ÕýÔÚ¼ì²â GitHub µÇÂ¼×´Ì¬ (Checking gh authentication status)...
         gh auth status >nul 2>&1
         if %errorlevel% neq 0 (
-            echo [æç¤º] æ‚¨å°šæœªç™»å½• GitHub CLIï¼Œè¯·åœ¨æŽ¥ä¸‹æ¥çš„å¼¹çª—ä¸­æ ¹æ®æç¤ºå®ŒæˆæŽˆæƒã€‚
+            echo [ÌáÊ¾] ÄúÉÐÎ´µÇÂ¼ GitHub CLI£¬ÇëÔÚ½ÓÏÂÀ´µÄµ¯´°ÖÐ¸ù¾ÝÌáÊ¾Íê³ÉÊÚÈ¨¡£
             echo (Please authenticate in the browser or terminal windows as prompted.)
             gh auth login
         )
         echo.
-        set /p REPO_NAME="è¯·è¾“å…¥è¦åœ¨ GitHub åˆ›å»ºçš„ä»“åº“å (é»˜è®¤: boxin-b2b-site): "
+        set /p REPO_NAME="ÇëÊäÈëÒªÔÚ GitHub ´´½¨µÄ²Ö¿âÃû (Ä¬ÈÏ: boxin-b2b-site): "
         if "%REPO_NAME%"=="" set REPO_NAME=boxin-b2b-site
         
         echo.
-        echo æ­£åœ¨ GitHub ä¸Šåˆ›å»ºå…¬å…±ä»“åº“: %REPO_NAME% å¹¶ä¸€é”®æŽ¨é€...
+        echo ÕýÔÚ GitHub ÉÏ´´½¨¹«¹²²Ö¿â: %REPO_NAME% ²¢Ò»¼üÍÆËÍ...
         echo (Creating public repository and pushing...)
         gh repo create %REPO_NAME% --public --source=. --remote=origin --push
         if %errorlevel% eq 0 (
             echo.
-            echo [æˆåŠŸ/SUCCESS] ä»“åº“åˆ›å»ºå¹¶æŽ¨é€å®Œæˆï¼
+            echo [³É¹¦/SUCCESS] ²Ö¿â´´½¨²¢ÍÆËÍÍê³É£¡
             goto :deploy_guide
         ) else (
-            echo [é”™è¯¯/ERROR] è‡ªåŠ¨å»ºä»“å¤±è´¥ã€‚æˆ‘ä»¬å°†å¼•å¯¼æ‚¨è½¬ä¸ºæ‰‹åŠ¨ç»‘å®šã€‚
+            echo [´íÎó/ERROR] ×Ô¶¯½¨²ÖÊ§°Ü¡£ÎÒÃÇ½«Òýµ¼Äú×ªÎªÊÖ¶¯°ó¶¨¡£
             echo.
         )
     )
 )
 
 echo.
-echo ---- æ‰‹åŠ¨å…³è” GitHub ä»“åº“ (Manual Git Remote Setup) ----
-echo è¯·å…ˆåœ¨ GitHub ç½‘é¡µç«¯ (https://github.com/new) åˆ›å»ºä¸€ä¸ªç©ºçš„ä»“åº“(ä¸è¦å‹¾é€‰ README/.gitignore)ã€‚
-echo åˆ›å»ºå®ŒæˆåŽï¼Œå¤åˆ¶å…¶ Git ä»“åº“åœ°å€ (ä¾‹å¦‚ https://github.com/æ‚¨çš„ç”¨æˆ·å/boxin-b2b-site.git)ã€‚
+echo ---- ÊÖ¶¯¹ØÁª GitHub ²Ö¿â (Manual Git Remote Setup) ----
+echo ÇëÏÈÔÚ GitHub ÍøÒ³¶Ë (https://github.com/new) ´´½¨Ò»¸ö¿ÕµÄ²Ö¿â(²»Òª¹´Ñ¡ README/.gitignore)¡£
+echo ´´½¨Íê³Éºó£¬¸´ÖÆÆä Git ²Ö¿âµØÖ· (ÀýÈç https://github.com/ÄúµÄÓÃ»§Ãû/boxin-b2b-site.git)¡£
 echo.
-set /p REPO_URL="è¯·è¾“å…¥æ‚¨çš„ GitHub ä»“åº“ URL (Please paste your Git repository URL): "
+set /p REPO_URL="ÇëÊäÈëÄúµÄ GitHub ²Ö¿â URL (Please paste your Git repository URL): "
 if "%REPO_URL%"=="" (
-    echo [é”™è¯¯] ä»“åº“åœ°å€ä¸èƒ½ä¸ºç©ºï¼
+    echo [´íÎó] ²Ö¿âµØÖ·²»ÄÜÎª¿Õ£¡
     goto :bind_flow
 )
 
 git remote add origin %REPO_URL%
-echo - æˆåŠŸå…³è”è¿œç¨‹ä»“åº“ (Successfully added remote origin).
+echo - ³É¹¦¹ØÁªÔ¶³Ì²Ö¿â (Successfully added remote origin).
 echo.
 
 :push_flow
-echo [4/4] æ­£åœ¨å°†ä»£ç æŽ¨é€åˆ° GitHub... (Pushing code to GitHub...)
+echo [4/4] ÕýÔÚ½«´úÂëÍÆËÍµ½ GitHub... (Pushing code to GitHub...)
 git branch -M main
 git push -u origin main
 if %errorlevel% neq 0 (
     echo.
-    echo [é”™è¯¯/ERROR] æŽ¨é€å¤±è´¥ï¼
-    echo è¯·æ£€æŸ¥ä»¥ä¸‹äº‹é¡¹ï¼š
-    echo 1. æ‚¨çš„ç½‘ç»œæ˜¯å¦å¯ä»¥è¿žæŽ¥ GitHubã€‚
-    echo 2. æ‚¨åœ¨ GitHub ä¸Šåˆ›å»ºçš„ä»“åº“æ˜¯å¦ä¸ºç©ºã€‚
-    echo 3. æ‚¨æ˜¯å¦æœ‰è¯¥ä»“åº“çš„å†™å…¥æƒé™ã€‚
+    echo [´íÎó/ERROR] ÍÆËÍÊ§°Ü£¡
+    echo Çë¼ì²éÒÔÏÂÊÂÏî£º
+    echo 1. ÄúµÄÍøÂçÊÇ·ñ¿ÉÒÔÁ¬½Ó GitHub¡£
+    echo 2. ÄúÔÚ GitHub ÉÏ´´½¨µÄ²Ö¿âÊÇ·ñÎª¿Õ¡£
+    echo 3. ÄúÊÇ·ñÓÐ¸Ã²Ö¿âµÄÐ´ÈëÈ¨ÏÞ¡£
     echo.
     pause
     exit /b 1
@@ -142,38 +142,39 @@ if %errorlevel% neq 0 (
 :deploy_guide
 echo.
 echo =======================================================================
-echo          ðŸŽ‰ [æ­å–œ/CONGRATULATIONS] ä»£ç å·²æˆåŠŸéƒ¨ç½²åˆ° GitHubï¼
+echo          ?? [¹§Ï²/CONGRATULATIONS] ´úÂëÒÑ³É¹¦²¿Êðµ½ GitHub£¡
 echo =======================================================================
 echo.
-echo æŽ¥ä¸‹æ¥è¯·æŒ‰ä»¥ä¸‹æ­¥éª¤åœ¨ Vercel æžé€Ÿä¸Šçº¿æ‚¨çš„åšæ–° B2B ç‹¬ç«‹ç«™ï¼š
+echo ½ÓÏÂÀ´Çë°´ÒÔÏÂ²½ÖèÔÚ Vercel ¼«ËÙÉÏÏßÄúµÄ²©ÐÂ B2B ¶ÀÁ¢Õ¾£º
 echo.
-echo STEP 1: ç™»å½• Vercel
-echo   - è®¿é—®å¹¶ç™»å½• Vercel: https://vercel.com
+echo STEP 1: µÇÂ¼ Vercel
+echo   - ·ÃÎÊ²¢µÇÂ¼ Vercel: https://vercel.com
 echo.
-echo STEP 2: å¯¼å…¥é¡¹ç›®
-echo   - ç‚¹å‡» [Add New] - [Project]
-echo   - åœ¨ Git åˆ—è¡¨ä¸­æ‰¾åˆ°åˆšåˆšæŽ¨é€çš„ä»“åº“ (ä¾‹å¦‚: boxin-b2b-site) å¹¶ç‚¹å‡» [Import]
+echo STEP 2: µ¼ÈëÏîÄ¿
+echo   - µã»÷ [Add New] - [Project]
+echo   - ÔÚ Git ÁÐ±íÖÐÕÒµ½¸Õ¸ÕÍÆËÍµÄ²Ö¿â (ÀýÈç: boxin-b2b-site) ²¢µã»÷ [Import]
 echo.
-echo STEP 3: ç¡®è®¤éƒ¨ç½²
-echo   - Framework Preset é€‰æ‹© [Next.js] (Vercel ä¼šè‡ªåŠ¨è¯†åˆ«)
-echo   - å±•å¼€ [Environment Variables]ï¼Œå¦‚æžœåŽç»­éœ€è¦é…ç½®å¯†é’¥ï¼Œå¯åœ¨æ­¤è¾“å…¥ (å½“å‰æš‚æ— éœ€é…ç½®)
-echo   - ç‚¹å‡» [Deploy] æŒ‰é’®ï¼Œç­‰å¾… 1-2 åˆ†é’Ÿï¼Œå³å¯èŽ·å¾— Vercel åˆ†é…çš„å…è´¹åŸŸå (ä¾‹å¦‚ xxx.vercel.app)
+echo STEP 3: È·ÈÏ²¿Êð
+echo   - Framework Preset Ñ¡Ôñ [Next.js] (Vercel »á×Ô¶¯Ê¶±ð)
+echo   - Õ¹¿ª [Environment Variables]£¬Èç¹ûºóÐøÐèÒªÅäÖÃÃÜÔ¿£¬¿ÉÔÚ´ËÊäÈë (µ±Ç°ÔÝÎÞÐèÅäÖÃ)
+echo   - µã»÷ [Deploy] °´Å¥£¬µÈ´ý 1-2 ·ÖÖÓ£¬¼´¿É»ñµÃ Vercel ·ÖÅäµÄÃâ·ÑÓòÃû (ÀýÈç xxx.vercel.app)
 echo.
-echo STEP 4: ç»‘å®š Namecheap è‡ªå®šä¹‰åŸŸå (Custom Domain)
-echo   - åœ¨ Vercel é¡¹ç›®é¢æ¿ï¼Œç‚¹å‡» [Settings] - [Domains]
-echo   - è¾“å…¥æ‚¨åœ¨ Namecheap è´­ä¹°çš„åŸŸå (å¦‚ www.yourdomain.com æˆ– yourdomain.com) å¹¶ç‚¹å‡» [Add]
-echo   - Vercel ä¼šç»™å‡ºæ‰€éœ€çš„è§£æžè®°å½•ï¼š
-echo     - è‹¥ç»‘å®š www.yourdomain.comï¼Œè¯·åœ¨ Namecheap çš„ DNS ä¸­æ·»åŠ  CNAME è®°å½•ï¼š
+echo STEP 4: °ó¶¨ Namecheap ×Ô¶¨ÒåÓòÃû (Custom Domain)
+echo   - ÔÚ Vercel ÏîÄ¿Ãæ°å£¬µã»÷ [Settings] - [Domains]
+echo   - ÊäÈëÄúÔÚ Namecheap ¹ºÂòµÄÓòÃû (Èç www.yourdomain.com »ò yourdomain.com) ²¢µã»÷ [Add]
+echo   - Vercel »á¸ø³öËùÐèµÄ½âÎö¼ÇÂ¼£º
+echo     - Èô°ó¶¨ www.yourdomain.com£¬ÇëÔÚ Namecheap µÄ DNS ÖÐÌí¼Ó CNAME ¼ÇÂ¼£º
 echo       * Type: CNAME Record
 echo       * Host: www
 echo       * Value: cname.vercel-dns.com.
-echo     - è‹¥ç»‘å®š yourdomain.com (é¡¶çº§/è£¸åŸŸå)ï¼Œè¯·æ·»åŠ  A è®°å½•ï¼š
+echo     - Èô°ó¶¨ yourdomain.com (¶¥¼¶/ÂãÓòÃû)£¬ÇëÌí¼Ó A ¼ÇÂ¼£º
 echo       * Type: A Record
 echo       * Host: @
-echo       * Value: 76.76.21.21 (Vercel å…¨çƒ DNS èŠ‚ç‚¹)
+echo       * Value: 76.76.21.21 (Vercel È«Çò DNS ½Úµã)
 echo.
-echo å®˜æ–¹å•†åŠ¡è”ç³»ä¿¡æ¯ (Eliane / +86 199 8201 2846 / Eliane@fsbox.com)
+echo ¹Ù·½ÉÌÎñÁªÏµÐÅÏ¢ (Eliane / +86 199 8201 2846 / Eliane@fsbox.com)
 echo =======================================================================
-echo éƒ¨ç½²å¼•å¯¼å®Œæˆï¼æŒ‰ä»»æ„é”®é€€å‡ºæœ¬çª—å£ã€‚
+echo ²¿ÊðÒýµ¼Íê³É£¡°´ÈÎÒâ¼üÍË³ö±¾´°¿Ú¡£
 pause >nul
 exit /b 0
+
