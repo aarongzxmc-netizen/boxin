@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /preview.html
-Disallow: /BOXIN_Website_Package_Final/
-
-Sitemap: https://goboxin.com/sitemap.xml

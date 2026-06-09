@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Stainless Steel Recycling Bin",
+    "url": "stainless-steel-recycling-bin.html",
+    "image": "dual_recycling",
+    "features": [
+      "Material: 201 / 304 Stainless Steel",
+      "Application: Indoor / Outdoor",
+      "Customization: Logo / Label / Color"
+    ]
+  },
+  {
+    "name": "4-Stream Recycling Station",
+    "url": "4-stream-recycling-station.html",
+    "image": "four_stream_open",
+    "features": [
+      "Material: 201 / 304 Stainless Steel",
+      "Application: Shopping Mall / Airport",
+      "Customization: Arabic / English Label"
+    ]
+  },
+  {
+    "name": "Stainless Steel Lobby Bin",
+    "url": "stainless-steel-lobby-bin.html",
+    "image": "lobby",
+    "features": [
+      "Material: 201 / 304 Stainless Steel",
+      "Application: Hotel / Office",
+      "Customization: Size / Finish / Logo"
+    ]
+  },
+  {
+    "name": "Outdoor Ashtray Bin",
+    "url": "outdoor-ashtray-bin.html",
+    "image": "ashtray",
+    "features": [
+      "Material: 201 / 304 Stainless Steel",
+      "Application: Outdoor / Smoking Area",
+      "Customization: Logo / Color / Pictogram"
+    ]
+  },
+  {
+    "name": "Commercial Pedal Bin",
+    "url": "commercial-pedal-bin.html",
+    "image": "pedal_rect",
+    "features": [
+      "Material: 201 / 304 Stainless Steel",
+      "Application: Office / Washroom",
+      "Customization: Size / Packaging"
+    ]
+  }
+]

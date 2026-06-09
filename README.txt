@@ -1,17 +1,18 @@
-BOXIN Website Package
+BOXIN Match Mockup Website Package
 
-Files included:
-- preview.html : approved long-page homepage preview
-- index.html : homepage
-- products.html : product navigation and product list
-- about.html : about us page
-- contact.html : contact / inquiry page
-- faq.html : FAQ page
-- assets/style.css : shared stylesheet
-- assets/images/ : logo, product images, homepage preview image
-- data_products.json : simple product data list
+This version was rebuilt to match the approved high-end homepage preview:
+- Factory website positioning
+- One main product in hero, no distorted product collage
+- B2B quote-focused copy
+- Full inquiry form with upload field
+- Product category navigation
+- Individual product detail pages
+- Customization, Projects, About, Blog, FAQ and Contact pages
+- Reserved images for project/factory/application sections
 
-Notes:
-- Static HTML package for design preview and handoff.
-- All product images are from the user-provided assets in this conversation.
-- Contact details are based on the user-provided BOXIN company information.
+Open preview.html first.
+
+
+Update:
+- AI-generated project, factory, application and blog images inserted into the website package.
+- Missing scene assets filled with cohesive AI images.

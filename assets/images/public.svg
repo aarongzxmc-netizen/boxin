@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#f4f7fb"/><stop offset="1" stop-color="#dfe8f7"/></linearGradient></defs>
+<rect width="900" height="560" rx="28" fill="url(#g)"/>
+<rect x="130" y="120" width="640" height="300" rx="18" fill="#fff" stroke="#d8e1ee"/>
+<text x="450" y="275" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" fill="#0a3a82">Public Area</text>
+<text x="450" y="330" font-family="Arial" font-size="22" text-anchor="middle" fill="#64748b">Reserved Image Area</text>
+</svg>
