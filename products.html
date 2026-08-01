@@ -6,6 +6,43 @@
 <title>BOXIN Products | Commercial Stainless Steel Bins</title>
 <meta name="description" content="BOXIN stainless steel trash bin manufacturer in China, OEM/ODM recycling bins for Middle East and Europe projects.">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ---- Quick View Modal ---- */
+.product-card{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(16,24,40,.12)}
+.qv-overlay{position:fixed;inset:0;z-index:9998;display:none;align-items:center;justify-content:center;padding:26px;background:rgba(8,15,28,.78);backdrop-filter:blur(3px)}
+.qv-overlay.open{display:flex}
+.qv-dialog{position:relative;width:min(1020px,100%);max-height:88vh;overflow:auto;border-radius:10px;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.45);display:grid;grid-template-columns:1fr 1fr;animation:qvIn .22s ease}
+@keyframes qvIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.qv-media{background:linear-gradient(150deg,#f4f7fb,#e6ecf5);display:flex;align-items:center;justify-content:center;padding:30px}
+.qv-media img{max-width:100%;max-height:420px;object-fit:contain;filter:drop-shadow(0 18px 26px rgba(0,0,0,.18))}
+.qv-panel{background:var(--dark,#111827);color:#fff;padding:34px 32px;display:flex;flex-direction:column}
+.qv-badge{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;border:1px solid rgba(201,168,76,.55);color:#c9a84c;background:rgba(201,168,76,.10);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.qv-title{font-size:26px;line-height:1.2;margin:16px 0 10px;letter-spacing:-.01em}
+.qv-desc{margin:0 0 20px;font-size:13.5px;line-height:1.75;color:#c9d2e0}
+.qv-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.qv-spec{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:6px;padding:12px 11px}
+.qv-spec span{display:block;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#8e9db5;margin-bottom:6px}
+.qv-spec b{font-size:12.5px;line-height:1.45;color:#fff;font-weight:700}
+.qv-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.qv-chip{font-size:11px;font-weight:700;color:#dbe3ef;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 12px}
+.qv-actions{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap}
+.qv-quote{flex:1;min-width:190px;background:var(--red,#e81923);color:#fff;text-align:center;padding:15px 20px;border-radius:4px;font-weight:900;letter-spacing:.04em;font-size:13.5px;box-shadow:0 14px 26px rgba(232,25,35,.28)}
+.qv-quote:hover{filter:brightness(1.06)}
+.qv-more{padding:15px 20px;border-radius:4px;font-weight:800;font-size:13px;color:#fff;border:1px solid rgba(255,255,255,.28)}
+.qv-more:hover{border-color:#c9a84c;color:#c9a84c}
+.qv-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border:none;border-radius:50%;background:rgba(255,255,255,.9);color:#111827;font-size:22px;line-height:1;cursor:pointer;z-index:3;box-shadow:0 6px 16px rgba(0,0,0,.22);transition:.18s}
+.qv-close:hover{background:var(--red,#e81923);color:#fff;transform:rotate(90deg)}
+body.qv-lock{overflow:hidden}
+@media(max-width:820px){
+  .qv-dialog{grid-template-columns:1fr}
+  .qv-media{padding:26px 20px}
+  .qv-media img{max-height:250px}
+  .qv-panel{padding:26px 20px}
+  .qv-title{font-size:21px}
+  .qv-specs{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
@@ -50,7 +87,148 @@
   <div class="copy"><h3>Custom Bins</h3><a href="products.html#custom">View More →</a></div>
   <div class="pic"><img src="assets/images/custom.png" alt="Custom Bins"></div>
 </div></div></div></section>
-<section class="section" id="recycling"><div class="container"><div class="section-title"><h2>Recycling Bins</h2><div class="redline"></div></div><div class="product-grid"><div class="card product-card"><div class="pic"><img src="assets/images/dual_recycling.png" alt="Stainless Steel Recycling Bin"></div><h3>Stainless Steel Recycling Bin</h3><ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Indoor / Outdoor</li><li>Customization: Logo / Label / Color</li></ul><a class="mini-btn" href="stainless-steel-recycling-bin.html">VIEW DETAILS</a></div><div class="card product-card"><div class="pic"><img src="assets/images/four_stream_open.png" alt="4-Stream Recycling Station"></div><h3>4-Stream Recycling Station</h3><ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Shopping Mall / Airport</li><li>Customization: Arabic / English Label</li></ul><a class="mini-btn" href="4-stream-recycling-station.html">VIEW DETAILS</a></div></div></div></section><section class="section" id="lobby"><div class="container"><div class="section-title"><h2>Lobby Bins</h2><div class="redline"></div></div><div class="product-grid"><div class="card product-card"><div class="pic"><img src="assets/images/lobby.png" alt="Stainless Steel Lobby Bin"></div><h3>Stainless Steel Lobby Bin</h3><ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Hotel / Office</li><li>Customization: Size / Finish / Logo</li></ul><a class="mini-btn" href="stainless-steel-lobby-bin.html">VIEW DETAILS</a></div></div></div></section><section class="section" id="outdoor"><div class="container"><div class="section-title"><h2>Outdoor Bins</h2><div class="redline"></div></div><div class="product-grid"><div class="card product-card"><div class="pic"><img src="assets/images/ashtray.png" alt="Outdoor Ashtray Bin"></div><h3>Outdoor Ashtray Bin</h3><ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Outdoor / Smoking Area</li><li>Customization: Logo / Color / Pictogram</li></ul><a class="mini-btn" href="outdoor-ashtray-bin.html">VIEW DETAILS</a></div></div></div></section><section class="section" id="ashtray"><div class="container"><div class="section-title"><h2>Ashtray Bins</h2><div class="redline"></div></div><div class="product-grid"><div class="card product-card"><div class="pic"><img src="assets/images/ashtray.png" alt="Outdoor Ashtray Bin"></div><h3>Outdoor Ashtray Bin</h3><ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Outdoor / Smoking Area</li><li>Customization: Logo / Color / Pictogram</li></ul><a class="mini-btn" href="outdoor-ashtray-bin.html">VIEW DETAILS</a></div></div></div></section><section class="section" id="pedal"><div class="container"><div class="section-title"><h2>Pedal Bins</h2><div class="redline"></div></div><div class="product-grid"><div class="card product-card"><div class="pic"><img src="assets/images/pedal_rect.jpg" alt="Commercial Pedal Bin"></div><h3>Commercial Pedal Bin</h3><ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Office / Washroom</li><li>Customization: Size / Packaging</li></ul><a class="mini-btn" href="commercial-pedal-bin.html">VIEW DETAILS</a></div></div></div></section><section class="section" id="custom"><div class="container"><div class="section-title"><h2>Custom Bins</h2><div class="redline"></div></div><div class="product-grid"><div class="card product-card"><div class="pic"><img src="assets/images/custom.png" alt="Custom Stainless Steel Bin"></div><h3>Custom Stainless Steel Bin</h3><ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Project Customization</li><li>Customization: Logo / Size / Structure</li></ul><a class="mini-btn" href="custom-stainless-steel-bin.html">VIEW DETAILS</a></div></div></div></section>
+
+<section class="section" id="recycling"><div class="container"><div class="section-title"><h2>Recycling Bins</h2><div class="redline"></div></div><div class="product-grid">
+
+<div class="card product-card" tabindex="0" role="button"
+  data-code="BX-D398"
+  data-img="assets/images/dual_recycling.png"
+  data-title="Stainless Steel Recycling Bin"
+  data-desc="Dual-stream stainless steel recycling bin for indoor and semi-outdoor commercial areas. Brushed 201/304 body with removable galvanized inner buckets for fast waste collection."
+  data-moq="50 sets"
+  data-lead="20-25 days"
+  data-material="201 / 304 Stainless Steel"
+  data-tags="Indoor / Outdoor|Logo &amp; Label Printing|Removable Inner Bucket|OEM / ODM"
+  data-link="stainless-steel-recycling-bin.html">
+  <div class="pic"><img src="assets/images/dual_recycling.png" alt="Stainless Steel Recycling Bin"></div>
+  <h3>Stainless Steel Recycling Bin</h3>
+  <ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Indoor / Outdoor</li><li>Customization: Logo / Label / Color</li></ul>
+  <a class="mini-btn" href="stainless-steel-recycling-bin.html">VIEW DETAILS</a>
+</div>
+
+<div class="card product-card" tabindex="0" role="button"
+  data-code="BX-D171"
+  data-img="assets/images/bx-d171-main.png"
+  data-title="3-Stream Stainless Steel Recycling Bin"
+  data-desc="Three-compartment recycling station in 304 stainless steel with brushed finish and galvanized iron inner buckets. Bilingual Arabic / English labels make it ready for hotels, shopping malls, parks, communities and schools."
+  data-moq="30 sets"
+  data-lead="20-25 days"
+  data-material="304 Stainless Steel / Brushed"
+  data-tags="L940 &times; W360 &times; H760 mm|Inner Bucket &Phi;300 &times; H580 mm|Galvanized Iron Liner|Arabic / English Label|Hotel &middot; Mall &middot; Park &middot; School"
+  data-link="stainless-steel-recycling-bin.html">
+  <div class="pic"><img src="assets/images/bx-d171-main.png" alt="BX-D171 3-Stream Stainless Steel Recycling Bin"></div>
+  <h3>3-Stream Stainless Steel Recycling Bin</h3>
+  <ul><li>Material: 304 Stainless Steel / Brushed</li><li>Size: L940 × W360 × H760 mm</li><li>Label: Arabic / English Bilingual</li></ul>
+  <a class="mini-btn" href="stainless-steel-recycling-bin.html">VIEW DETAILS</a>
+</div>
+
+<div class="card product-card" tabindex="0" role="button"
+  data-code="BX-A111"
+  data-img="assets/images/four_stream_open.png"
+  data-title="4-Stream Recycling Station"
+  data-desc="Four-stream recycling station engineered for high-traffic public areas. Independent inner buckets, top-opening apertures and multilingual signage support strict municipal waste-sorting requirements."
+  data-moq="30 sets"
+  data-lead="25-30 days"
+  data-material="201 / 304 Stainless Steel"
+  data-tags="Shopping Mall / Airport|Arabic &amp; English Label|4 Independent Buckets|Municipal Tender Ready"
+  data-link="4-stream-recycling-station.html">
+  <div class="pic"><img src="assets/images/four_stream_open.png" alt="4-Stream Recycling Station"></div>
+  <h3>4-Stream Recycling Station</h3>
+  <ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Shopping Mall / Airport</li><li>Customization: Arabic / English Label</li></ul>
+  <a class="mini-btn" href="4-stream-recycling-station.html">VIEW DETAILS</a>
+</div>
+
+</div></div></section>
+
+<section class="section" id="lobby"><div class="container"><div class="section-title"><h2>Lobby Bins</h2><div class="redline"></div></div><div class="product-grid">
+<div class="card product-card" tabindex="0" role="button"
+  data-code="BX-L200"
+  data-img="assets/images/lobby.png"
+  data-title="Stainless Steel Lobby Bin"
+  data-desc="Slim lobby bin designed for hotel entrances, office floors and reception areas. Mirror or brushed finish with concealed liner keeps the front-of-house presentation clean."
+  data-moq="50 sets"
+  data-lead="18-22 days"
+  data-material="201 / 304 Stainless Steel"
+  data-tags="Hotel / Office|Mirror or Brushed Finish|Concealed Inner Liner|Logo Engraving"
+  data-link="stainless-steel-lobby-bin.html">
+  <div class="pic"><img src="assets/images/lobby.png" alt="Stainless Steel Lobby Bin"></div>
+  <h3>Stainless Steel Lobby Bin</h3>
+  <ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Hotel / Office</li><li>Customization: Size / Finish / Logo</li></ul>
+  <a class="mini-btn" href="stainless-steel-lobby-bin.html">VIEW DETAILS</a>
+</div>
+</div></div></section>
+
+<section class="section" id="outdoor"><div class="container"><div class="section-title"><h2>Outdoor Bins</h2><div class="redline"></div></div><div class="product-grid">
+<div class="card product-card" tabindex="0" role="button"
+  data-code="BX-D389"
+  data-img="assets/images/ashtray.png"
+  data-title="Outdoor Ashtray Bin"
+  data-desc="Weather-resistant outdoor ashtray bin with reinforced base and removable ash pan, built for parks, streetscapes and building perimeters in harsh climates."
+  data-moq="100 sets"
+  data-lead="18-22 days"
+  data-material="201 / 304 Stainless Steel"
+  data-tags="Outdoor / Smoking Area|Removable Ash Pan|Anti-Corrosion Treatment|Pictogram Printing"
+  data-link="outdoor-ashtray-bin.html">
+  <div class="pic"><img src="assets/images/ashtray.png" alt="Outdoor Ashtray Bin"></div>
+  <h3>Outdoor Ashtray Bin</h3>
+  <ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Outdoor / Smoking Area</li><li>Customization: Logo / Color / Pictogram</li></ul>
+  <a class="mini-btn" href="outdoor-ashtray-bin.html">VIEW DETAILS</a>
+</div>
+</div></div></section>
+
+<section class="section" id="ashtray"><div class="container"><div class="section-title"><h2>Ashtray Bins</h2><div class="redline"></div></div><div class="product-grid">
+<div class="card product-card" tabindex="0" role="button"
+  data-code="BX-D389"
+  data-img="assets/images/ashtray.png"
+  data-title="Outdoor Ashtray Bin"
+  data-desc="Combined ashtray and waste bin for designated smoking areas. Stainless steel snuffer tray with removable ash pan simplifies daily cleaning for facility teams."
+  data-moq="100 sets"
+  data-lead="18-22 days"
+  data-material="201 / 304 Stainless Steel"
+  data-tags="Outdoor / Smoking Area|Removable Ash Pan|Pictogram Printing|Weather Resistant"
+  data-link="outdoor-ashtray-bin.html">
+  <div class="pic"><img src="assets/images/ashtray.png" alt="Outdoor Ashtray Bin"></div>
+  <h3>Outdoor Ashtray Bin</h3>
+  <ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Outdoor / Smoking Area</li><li>Customization: Logo / Color / Pictogram</li></ul>
+  <a class="mini-btn" href="outdoor-ashtray-bin.html">VIEW DETAILS</a>
+</div>
+</div></div></section>
+
+<section class="section" id="pedal"><div class="container"><div class="section-title"><h2>Pedal Bins</h2><div class="redline"></div></div><div class="product-grid">
+<div class="card product-card" tabindex="0" role="button"
+  data-code="BX-P120"
+  data-img="assets/images/pedal_rect.jpg"
+  data-title="Commercial Pedal Bin"
+  data-desc="Hands-free pedal bin with soft-close lid and plastic inner bucket, suited to offices, washrooms, clinics and hotel guest rooms where hygiene matters."
+  data-moq="200 sets"
+  data-lead="15-20 days"
+  data-material="201 / 304 Stainless Steel"
+  data-tags="Office / Washroom|Soft-Close Lid|Plastic Inner Bucket|Export Carton Packing"
+  data-link="commercial-pedal-bin.html">
+  <div class="pic"><img src="assets/images/pedal_rect.jpg" alt="Commercial Pedal Bin"></div>
+  <h3>Commercial Pedal Bin</h3>
+  <ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Office / Washroom</li><li>Customization: Size / Packaging</li></ul>
+  <a class="mini-btn" href="commercial-pedal-bin.html">VIEW DETAILS</a>
+</div>
+</div></div></section>
+
+<section class="section" id="custom"><div class="container"><div class="section-title"><h2>Custom Bins</h2><div class="redline"></div></div><div class="product-grid">
+<div class="card product-card" tabindex="0" role="button"
+  data-code="OEM / ODM"
+  data-img="assets/images/custom.png"
+  data-title="Custom Stainless Steel Bin"
+  data-desc="Project-based OEM/ODM bins built to your drawings: structure, capacity, finish, signage and packaging are all adjustable. Sample and tooling support available for tender projects."
+  data-moq="Negotiable"
+  data-lead="30-40 days"
+  data-material="Customer Specified"
+  data-tags="Drawing-Based Production|Logo / Size / Structure|Sample Support|Tender Documentation"
+  data-link="custom-stainless-steel-bin.html">
+  <div class="pic"><img src="assets/images/custom.png" alt="Custom Stainless Steel Bin"></div>
+  <h3>Custom Stainless Steel Bin</h3>
+  <ul><li>Material: 201 / 304 Stainless Steel</li><li>Application: Project Customization</li><li>Customization: Logo / Size / Structure</li></ul>
+  <a class="mini-btn" href="custom-stainless-steel-bin.html">VIEW DETAILS</a>
+</div>
+</div></div></section>
 
 
 <section class="footer-cta">
@@ -74,6 +252,91 @@
   </div>
 </footer>
 <a class="float-wa" href="https://wa.me/8619982012846">☘</a>
+
+<div class="qv-overlay" id="qvOverlay" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+  <div class="qv-dialog">
+    <button class="qv-close" id="qvClose" type="button" aria-label="Close quick view">×</button>
+    <div class="qv-media"><img id="qvImg" src="" alt=""></div>
+    <div class="qv-panel">
+      <div class="qv-badge" id="qvBadge">BOXIN</div>
+      <h2 class="qv-title" id="qvTitle"></h2>
+      <p class="qv-desc" id="qvDesc"></p>
+      <div class="qv-specs">
+        <div class="qv-spec"><span>MOQ</span><b id="qvMoq"></b></div>
+        <div class="qv-spec"><span>Lead Time</span><b id="qvLead"></b></div>
+        <div class="qv-spec"><span>Material</span><b id="qvMaterial"></b></div>
+      </div>
+      <div class="qv-chips" id="qvChips"></div>
+      <div class="qv-actions">
+        <a class="qv-quote" id="qvQuote" href="contact.html#inquiry">GET QUOTE NOW →</a>
+        <a class="qv-more" id="qvMore" href="#">Full Specification</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var overlay=document.getElementById('qvOverlay');
+  if(!overlay) return;
+  var dialog=overlay.querySelector('.qv-dialog');
+  var img=document.getElementById('qvImg'),badge=document.getElementById('qvBadge'),
+      title=document.getElementById('qvTitle'),desc=document.getElementById('qvDesc'),
+      moq=document.getElementById('qvMoq'),lead=document.getElementById('qvLead'),
+      material=document.getElementById('qvMaterial'),chips=document.getElementById('qvChips'),
+      quote=document.getElementById('qvQuote'),more=document.getElementById('qvMore');
+
+  function fill(card){
+    var t=card.getAttribute('data-title')||'';
+    img.src=card.getAttribute('data-img')||'';
+    img.alt=t;
+    badge.textContent=card.getAttribute('data-code')||'BOXIN';
+    title.textContent=t;
+    desc.textContent=card.getAttribute('data-desc')||'';
+    moq.textContent=card.getAttribute('data-moq')||'-';
+    lead.textContent=card.getAttribute('data-lead')||'-';
+    material.textContent=card.getAttribute('data-material')||'-';
+    chips.innerHTML='';
+    (card.getAttribute('data-tags')||'').split('|').forEach(function(tag){
+      tag=tag.trim();
+      if(!tag) return;
+      var el=document.createElement('span');
+      el.className='qv-chip';
+      el.textContent=tag;
+      chips.appendChild(el);
+    });
+    quote.href='contact.html#inquiry';
+    more.href=card.getAttribute('data-link')||'products.html';
+  }
+
+  function open(card){
+    fill(card);
+    overlay.classList.add('open');
+    document.body.classList.add('qv-lock');
+    document.getElementById('qvClose').focus();
+  }
+  function close(){
+    overlay.classList.remove('open');
+    document.body.classList.remove('qv-lock');
+  }
+
+  document.querySelectorAll('.product-card[data-title]').forEach(function(card){
+    card.addEventListener('click',function(e){
+      if(e.target.closest('a')) return;
+      open(card);
+    });
+    card.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();open(card);}
+    });
+  });
+
+  document.getElementById('qvClose').addEventListener('click',close);
+  overlay.addEventListener('click',function(e){ if(!dialog.contains(e.target)) close(); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&overlay.classList.contains('open')) close();
+  });
+})();
+</script>
 
 </body>
 </html>
